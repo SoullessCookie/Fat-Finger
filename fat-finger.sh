@@ -1,0 +1,47 @@
+#!/bin/bash
+
+declare -A commands=(
+  ["lsit"]="ls"
+  ["gitt"]="git"
+  ["gitp"]="git"
+  ["gitpuh"]="git push"
+  ["gitpul"]="git pull"
+  ["gitcm"]="git commit"
+  ["pyhton"]="python"
+  ["pytho"]="python"
+  ["pythoon"]="python"
+  ["cd.."]="cd .."
+  ["dircetory"]="directory"
+  ["echho"]="echo"
+  ["echhoi"]="echo -n"
+  ["echhoe"]="echo -e"
+  ["grpe"]="grep"
+  ["grepv"]="grep -v"
+  ["is"]="ls"
+  ["ittab"]="crontab"
+  ["mkaedir"]="mkdir"
+  ["moer"]="more"
+  ["mroe"]="more"
+  ["les"]="less"
+  ["pico"]="nano"
+  ["rm-rf"]="rm -rf"
+  ["rmf"]="rm -f"
+  ["seth"]="set"
+  ["sl"]="ls"
+  ["updae"]="update"
+  ["viim"]="vim"
+  ["vimc"]="vim -c"
+  ["celar"]="clear"
+  ["cear"]="clear"
+  ["cealr"]="clear"
+  ["ceaer"]="clear"
+  ["clar"]="clear"
+  ["celr"]="clear"
+  ["clr"]="clear"
+)
+
+for misspelling in "${!commands[@]}"; do
+  correct_command="${commands[$misspelling]}"
+  alias "$misspelling"="$correct_command"
+done
+
